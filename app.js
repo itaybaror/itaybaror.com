@@ -49,6 +49,7 @@ function getActiveAlbum() {
 
 function setMode(mode) {
   activeMode = mode;
+  portfolioView.classList.toggle("slideshow-mode", mode === "slideshow");
   viewGalleryButton.classList.toggle("is-active", mode === "gallery");
   viewSlideshowButton.classList.toggle("is-active", mode === "slideshow");
   galleryViewElement.classList.toggle("is-hidden", mode !== "gallery");
@@ -91,6 +92,21 @@ function moveSlide(direction) {
   }
 
   setSlide(slideIndex + direction, direction, true);
+}
+
+function getGalleryPhotoLabel(photo, index) {
+  if (photo.caption && photo.caption.trim()) {
+    return photo.caption.trim();
+  }
+
+  const source = photo.src ?? "";
+  const fileName = decodeURIComponent(source.split("/").pop() ?? "");
+  const nameWithoutExtension = fileName.replace(/\.[^.]+$/, "");
+  if (nameWithoutExtension) {
+    return nameWithoutExtension;
+  }
+
+  return `Image ${index + 1}`;
 }
 
 function renderAlbumNav() {
@@ -138,7 +154,12 @@ function renderGallery(album) {
     image.loading = "lazy";
     image.decoding = "async";
 
+    const label = document.createElement("span");
+    label.className = "gallery-item-label";
+    label.textContent = getGalleryPhotoLabel(photo, index);
+
     button.append(image);
+    button.append(label);
     button.addEventListener("click", () => {
       setMode("slideshow");
       setSlide(index, 1, true);
