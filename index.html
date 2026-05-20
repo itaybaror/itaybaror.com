@@ -52,16 +52,29 @@
         </div>
 
         <div class="sidebar-block sidebar-meta-links">
-          <button id="view-gallery" class="sidebar-link is-active" type="button">GALLERY VIEW</button>
-          <button id="view-slideshow" class="sidebar-link" type="button">SLIDESHOW VIEW</button>
-          <button id="back-home" class="sidebar-link" type="button">BACK TO LANDING</button>
+          <div class="sidebar-view-links">
+            <button id="view-gallery" class="sidebar-link is-active" type="button">GALLERY VIEW</button>
+            <button id="view-slideshow" class="sidebar-link" type="button">SLIDESHOW VIEW</button>
+            <button id="back-home" class="sidebar-link" type="button">BACK TO LANDING</button>
+          </div>
+          <button
+            id="toggle-sidebar"
+            class="menu-chevron sidebar-chevron"
+            type="button"
+            aria-pressed="false"
+            aria-label="Hide menu"
+          >
+            ‹
+          </button>
         </div>
       </aside>
 
       <section class="portfolio-content">
         <header class="content-header">
-          <h2 id="album-title" class="content-title">Albums</h2>
-          <p id="album-description" class="content-description">Select an album to start.</p>
+          <div class="content-heading">
+            <h2 id="album-title" class="content-title">Albums</h2>
+            <p id="album-description" class="content-description">Select an album to start.</p>
+          </div>
         </header>
 
         <section id="gallery-view" class="gallery-view" aria-label="Gallery wall"></section>
@@ -76,6 +89,10 @@
           <p id="slide-counter" class="slide-counter">0 / 0</p>
         </section>
       </section>
+      <button id="reveal-sidebar" class="reveal-sidebar" type="button" aria-label="Show menu">
+        <span class="reveal-icon" aria-hidden="true">›</span>
+        <span class="reveal-label">menu</span>
+      </button>
     </main>
 
     <script type="module" src="./app.js"></script>

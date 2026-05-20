@@ -1,11 +1,11 @@
 :root {
-  --gray-00: #f6f6f6;
-  --gray-10: #e5e5e5;
-  --gray-20: #d7d7d7;
-  --gray-40: #8f8f8f;
+  --gray-00: #e7e7e7;
+  --gray-10: #dddddd;
+  --gray-20: #cfcfcf;
+  --gray-40: #8c8c8c;
   --gray-80: #222222;
   --text-main: #121212;
-  --accent: #d2a631;
+  --accent: #d0a02c;
   --white: #ffffff;
 }
 
@@ -23,6 +23,7 @@ body {
   font-family: "Manrope", sans-serif;
   background: var(--gray-00);
   color: var(--text-main);
+  overflow: hidden;
 }
 
 button {
@@ -156,36 +157,51 @@ button {
 
 /* Portfolio */
 .portfolio-view {
+  --sidebar-width: 370px;
+  --panel-top: 1.55rem;
+  height: 100vh;
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: 390px 1fr;
-  background: var(--gray-00);
+  position: relative;
+  background: #ffffff;
 }
 
 .sidebar {
-  background: var(--gray-20);
-  padding: 2rem 1.6rem;
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: var(--sidebar-width);
+  background: #ffffff;
+  padding: var(--panel-top) 0.8rem 1.2rem;
   display: grid;
   grid-template-rows: auto auto 1fr;
-  gap: 2rem;
-  position: sticky;
-  top: 0;
-  height: 100vh;
+  gap: 2.2rem;
   overflow: auto;
+  z-index: 10;
+  transition: transform 0.45s cubic-bezier(0.22, 0.62, 0.23, 1), opacity 0.35s ease;
+  box-shadow: 2px 0 0 rgba(0, 0, 0, 0.06);
+}
+
+.portfolio-view.sidebar-hidden .sidebar {
+  transform: translateX(calc(-1 * var(--sidebar-width) - 16px));
+  opacity: 0;
+  pointer-events: none;
 }
 
 .sidebar-title {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(1.8rem, 2.4vw, 3.35rem);
-  letter-spacing: 0.03em;
+  font-weight: 800;
+  font-size: clamp(1.58rem, 2.05vw, 2.55rem);
+  letter-spacing: 0;
+  line-height: 0.98;
 }
 
 .sidebar-subtitle {
-  margin: 0.2rem 0 0;
-  font-size: clamp(1rem, 1.5vw, 2.1rem);
-  color: #555555;
-  letter-spacing: 0.01em;
+  margin: 0.35rem 0 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.78rem, 1vw, 1.3rem);
+  color: #5c5c5c;
+  letter-spacing: 0;
 }
 
 .sidebar-block {
@@ -197,8 +213,9 @@ button {
   margin: 0;
   color: var(--accent);
   font-family: "Montserrat", sans-serif;
-  font-size: 0.9rem;
-  letter-spacing: 0.02em;
+  font-size: clamp(0.95rem, 1.2vw, 1.35rem);
+  letter-spacing: 0;
+  font-weight: 500;
 }
 
 .album-nav {
@@ -212,10 +229,11 @@ button {
   background: transparent;
   color: var(--gray-40);
   font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.01em;
-  font-size: clamp(1.22rem, 1.45vw, 2.05rem);
-  padding: 0.3rem 0;
+  letter-spacing: 0;
+  font-size: clamp(0.95rem, 1.32vw, 1.55rem);
+  padding: 0.15rem 0;
   cursor: pointer;
   transition: color 0.2s ease;
 }
@@ -230,6 +248,19 @@ button {
 
 .sidebar-meta-links {
   align-content: end;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 0.7rem;
+}
+
+.sidebar-view-links {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.sidebar-chevron {
+  align-self: start;
+  margin-top: 0.1rem;
 }
 
 .sidebar-link {
@@ -237,51 +268,155 @@ button {
   text-align: left;
   padding: 0;
   background: transparent;
-  color: var(--gray-40);
+  color: #8a8a8a;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  font-size: 0.95rem;
-  letter-spacing: 0.01em;
+  font-weight: 500;
+  font-size: clamp(0.72rem, 1.02vw, 1.08rem);
+  letter-spacing: 0;
+  line-height: 1.12;
   cursor: pointer;
 }
 
 .sidebar-link.is-active,
 .sidebar-link:hover {
-  color: #303030;
+  color: #3d3d3d;
 }
 
 .portfolio-content {
-  padding: 1rem;
-  overflow: hidden;
+  margin-left: var(--sidebar-width);
+  height: 100vh;
+  min-height: 100vh;
+  padding: var(--panel-top) 1rem 0.9rem;
+  background: #ffffff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: margin-left 0.45s cubic-bezier(0.22, 0.62, 0.23, 1);
+}
+
+.portfolio-view.sidebar-hidden .portfolio-content {
+  margin-left: 0;
 }
 
 .content-header {
   display: flex;
-  align-items: baseline;
-  gap: 0.9rem;
-  padding: 0.1rem 0.2rem 0.75rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 0 0.2rem 0.8rem;
+}
+
+.content-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.08rem;
 }
 
 .content-title {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  font-size: clamp(0.9rem, 1.2vw, 1.2rem);
-  letter-spacing: 0.06em;
+  font-weight: 800;
+  font-size: clamp(1.02rem, 1.42vw, 1.58rem);
+  letter-spacing: 0.02em;
+  line-height: 1;
 }
 
 .content-description {
   margin: 0;
-  color: #5e5e5e;
-  font-size: 0.88rem;
+  color: #666666;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.62rem, 0.78vw, 0.76rem);
+  white-space: normal;
+  line-height: 1.08;
+}
+
+.menu-chevron {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #b8b8b8;
+  background: #ffffff;
+  color: #5b5b5b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.35rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-chevron:hover {
+  color: #1f1f1f;
+  border-color: #8f8f8f;
+}
+
+.portfolio-view.sidebar-hidden .menu-chevron {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-10px);
+}
+
+.reveal-sidebar {
+  position: fixed;
+  left: 10px;
+  top: 50%;
+  transform: translate(-12px, -50%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20;
+  border: 1px solid #b8b8b8;
+  background: #ffffff;
+  color: #4a4a4a;
+  border-radius: 999px;
+  padding: 0.35rem 0.55rem 0.35rem 0.45rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: opacity 0.28s ease, transform 0.35s cubic-bezier(0.22, 0.62, 0.23, 1), box-shadow 0.25s ease;
+}
+
+.reveal-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.reveal-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.67rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.portfolio-view.sidebar-hidden .reveal-sidebar {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(0, -50%);
+  animation: revealPulse 1.8s ease-in-out infinite;
+}
+
+.reveal-sidebar:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+@keyframes revealPulse {
+  0%,
+  100% {
+    transform: translate(0, -50%) scale(1);
+  }
+  50% {
+    transform: translate(0, -50%) scale(1.03);
+  }
 }
 
 .gallery-view {
-  columns: 3 320px;
+  columns: 3 300px;
   column-gap: 12px;
-  height: calc(100vh - 95px);
-  overflow: auto;
-  padding-right: 0.2rem;
+  min-height: calc(100vh - 120px);
+  padding: 0 0.2rem 1.1rem 0.2rem;
+  background: #ffffff;
 }
 
 .gallery-item {
@@ -298,9 +433,13 @@ button {
 .gallery-item img {
   width: 100%;
   display: block;
-  background: #dadada;
-  border: 6px solid #f6f6f6;
-  outline: 1px solid #d8d8d8;
+  border: 0;
+  outline: 0;
+}
+
+.gallery-item-tall img {
+  min-height: 420px;
+  object-fit: cover;
 }
 
 .empty-state {
@@ -308,6 +447,7 @@ button {
   padding: 1rem;
   color: #646464;
   font-size: 0.92rem;
+  min-width: 340px;
 }
 
 .slideshow-view {
@@ -397,29 +537,55 @@ button {
 
 @media (max-width: 1320px) {
   .portfolio-view {
-    grid-template-columns: 320px 1fr;
+    --sidebar-width: 330px;
   }
 }
 
 @media (max-width: 980px) {
-  .portfolio-view {
-    grid-template-columns: 1fr;
+  body {
+    overflow: auto;
   }
 
   .sidebar {
     position: static;
-    height: auto;
+    width: auto;
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    box-shadow: none;
     grid-template-rows: auto auto auto;
   }
 
-  .gallery-view,
-  .slideshow-view {
+  .portfolio-content {
+    margin-left: 0;
     height: auto;
-    min-height: 68vh;
+    min-height: auto;
+    padding-top: 1rem;
+    overflow: visible;
   }
 
   .gallery-view {
-    columns: 2 240px;
+    columns: 2 220px;
+    min-height: auto;
+  }
+
+  .menu-chevron,
+  .reveal-sidebar {
+    display: none;
+  }
+
+  .content-heading {
+    flex-wrap: wrap;
+    gap: 0.15rem 0.6rem;
+  }
+
+  .content-description {
+    white-space: normal;
+  }
+
+  .slideshow-view {
+    height: auto;
+    min-height: 68vh;
   }
 }
 

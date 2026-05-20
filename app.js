@@ -7,6 +7,8 @@ const backHomeButton = document.querySelector("#back-home");
 const albumNavElement = document.querySelector("#album-nav");
 const albumTitleElement = document.querySelector("#album-title");
 const albumDescriptionElement = document.querySelector("#album-description");
+const toggleSidebarButton = document.querySelector("#toggle-sidebar");
+const revealSidebarButton = document.querySelector("#reveal-sidebar");
 const viewGalleryButton = document.querySelector("#view-gallery");
 const viewSlideshowButton = document.querySelector("#view-slideshow");
 const galleryViewElement = document.querySelector("#gallery-view");
@@ -21,6 +23,7 @@ let albums = [];
 let activeAlbumId = null;
 let activeMode = "gallery";
 let slideIndex = 0;
+let sidebarHidden = false;
 
 function normalizeIndex(index, length) {
   return (index + length) % length;
@@ -29,6 +32,15 @@ function normalizeIndex(index, length) {
 function showPortfolio(isPortfolioVisible) {
   landingView.classList.toggle("is-hidden", isPortfolioVisible);
   portfolioView.classList.toggle("is-hidden", !isPortfolioVisible);
+}
+
+function setSidebarVisibility(isHidden) {
+  sidebarHidden = isHidden;
+  portfolioView.classList.toggle("sidebar-hidden", isHidden);
+  toggleSidebarButton.textContent = isHidden ? "›" : "‹";
+  toggleSidebarButton.setAttribute("aria-label", isHidden ? "Show menu" : "Hide menu");
+  toggleSidebarButton.setAttribute("aria-pressed", String(isHidden));
+  revealSidebarButton.classList.toggle("is-visible", isHidden);
 }
 
 function getActiveAlbum() {
@@ -117,7 +129,7 @@ function renderGallery(album) {
   for (const [index, photo] of album.photos.entries()) {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "gallery-item";
+    button.className = `gallery-item ${index % 5 === 0 ? "gallery-item-tall" : ""}`;
     button.setAttribute("aria-label", `Open slideshow at image ${index + 1}`);
 
     const image = document.createElement("img");
@@ -149,8 +161,8 @@ function renderActiveAlbum() {
   }
 
   albumTitleElement.textContent = album.title ?? album.id;
-  albumDescriptionElement.textContent =
-    album.description || `${album.photos?.length ?? 0} images in this collection.`;
+  const imageCount = album.photos?.length ?? 0;
+  albumDescriptionElement.textContent = `${imageCount} image${imageCount === 1 ? "" : "s"} in this collection.`;
 
   renderGallery(album);
   setSlide(slideIndex, 1, false);
@@ -188,6 +200,8 @@ backHomeButton.addEventListener("click", () => {
 
 viewGalleryButton.addEventListener("click", () => setMode("gallery"));
 viewSlideshowButton.addEventListener("click", () => setMode("slideshow"));
+toggleSidebarButton.addEventListener("click", () => setSidebarVisibility(!sidebarHidden));
+revealSidebarButton.addEventListener("click", () => setSidebarVisibility(false));
 
 previousSlideButton.addEventListener("click", () => moveSlide(-1));
 nextSlideButton.addEventListener("click", () => moveSlide(1));
@@ -223,6 +237,10 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && activeMode === "slideshow") {
     setMode("gallery");
   }
+
+  if (event.key.toLowerCase() === "m") {
+    setSidebarVisibility(!sidebarHidden);
+  }
 });
 
 window.addEventListener("hashchange", () => {
@@ -231,4 +249,5 @@ window.addEventListener("hashchange", () => {
 
 showPortfolio(window.location.hash === "#portfolio");
 setMode("gallery");
+setSidebarVisibility(false);
 loadGallery();
