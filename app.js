@@ -129,7 +129,7 @@ function renderGallery(album) {
   for (const [index, photo] of album.photos.entries()) {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = `gallery-item ${index % 5 === 0 ? "gallery-item-tall" : ""}`;
+    button.className = "gallery-item";
     button.setAttribute("aria-label", `Open slideshow at image ${index + 1}`);
 
     const image = document.createElement("img");

@@ -420,26 +420,24 @@ button {
 }
 
 .gallery-item {
-  display: block;
+  display: flex;
+  align-items: flex-start;
   width: 100%;
-  margin: 0 0 12px;
-  padding: 0;
+  margin: 0;
+  padding: 0 0 12px;
   border: 0;
-  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid-column;
   background: transparent;
   cursor: pointer;
 }
 
 .gallery-item img {
   width: 100%;
+  height: auto;
   display: block;
   border: 0;
   outline: 0;
-}
-
-.gallery-item-tall img {
-  min-height: 420px;
-  object-fit: cover;
 }
 
 .empty-state {
