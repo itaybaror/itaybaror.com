@@ -1,379 +1,379 @@
 {
-  "generatedAt": "2026-05-20T11:43:19.816Z",
+  "generatedAt": "2026-05-20T15:17:42.980Z",
   "albums": [
     {
       "id": "Budapest",
       "title": "Budapest",
       "description": "",
-      "cover": "/public/photos/Budapest/IMG_0598.JPG",
+      "cover": "./public/photos/Budapest/IMG_0598.JPG",
       "photos": [
         {
-          "src": "/public/photos/Budapest/IMG_0598.JPG",
+          "src": "./public/photos/Budapest/IMG_0598.JPG",
           "alt": "Budapest 1",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0601.JPG",
+          "src": "./public/photos/Budapest/IMG_0601.JPG",
           "alt": "Budapest 2",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0607.JPG",
+          "src": "./public/photos/Budapest/IMG_0607.JPG",
           "alt": "Budapest 3",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0608.JPG",
+          "src": "./public/photos/Budapest/IMG_0608.JPG",
           "alt": "Budapest 4",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0612.JPG",
+          "src": "./public/photos/Budapest/IMG_0612.JPG",
           "alt": "Budapest 5",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0614.JPG",
+          "src": "./public/photos/Budapest/IMG_0614.JPG",
           "alt": "Budapest 6",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0617.JPG",
+          "src": "./public/photos/Budapest/IMG_0617.JPG",
           "alt": "Budapest 7",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0619.JPG",
+          "src": "./public/photos/Budapest/IMG_0619.JPG",
           "alt": "Budapest 8",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0625.JPG",
+          "src": "./public/photos/Budapest/IMG_0625.JPG",
           "alt": "Budapest 9",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0628.JPG",
+          "src": "./public/photos/Budapest/IMG_0628.JPG",
           "alt": "Budapest 10",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0630.JPG",
+          "src": "./public/photos/Budapest/IMG_0630.JPG",
           "alt": "Budapest 11",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0634.JPG",
+          "src": "./public/photos/Budapest/IMG_0634.JPG",
           "alt": "Budapest 12",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0637.JPG",
+          "src": "./public/photos/Budapest/IMG_0637.JPG",
           "alt": "Budapest 13",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0640.JPG",
+          "src": "./public/photos/Budapest/IMG_0640.JPG",
           "alt": "Budapest 14",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0641.JPG",
+          "src": "./public/photos/Budapest/IMG_0641.JPG",
           "alt": "Budapest 15",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0642.JPG",
+          "src": "./public/photos/Budapest/IMG_0642.JPG",
           "alt": "Budapest 16",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0650.JPG",
+          "src": "./public/photos/Budapest/IMG_0650.JPG",
           "alt": "Budapest 17",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0651.JPG",
+          "src": "./public/photos/Budapest/IMG_0651.JPG",
           "alt": "Budapest 18",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0656.JPG",
+          "src": "./public/photos/Budapest/IMG_0656.JPG",
           "alt": "Budapest 19",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0657.JPG",
+          "src": "./public/photos/Budapest/IMG_0657.JPG",
           "alt": "Budapest 20",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0658.JPG",
+          "src": "./public/photos/Budapest/IMG_0658.JPG",
           "alt": "Budapest 21",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0659.JPG",
+          "src": "./public/photos/Budapest/IMG_0659.JPG",
           "alt": "Budapest 22",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0662.JPG",
+          "src": "./public/photos/Budapest/IMG_0662.JPG",
           "alt": "Budapest 23",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0664.JPG",
+          "src": "./public/photos/Budapest/IMG_0664.JPG",
           "alt": "Budapest 24",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0665.JPG",
+          "src": "./public/photos/Budapest/IMG_0665.JPG",
           "alt": "Budapest 25",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0669.JPG",
+          "src": "./public/photos/Budapest/IMG_0669.JPG",
           "alt": "Budapest 26",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0670.JPG",
+          "src": "./public/photos/Budapest/IMG_0670.JPG",
           "alt": "Budapest 27",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0672.JPG",
+          "src": "./public/photos/Budapest/IMG_0672.JPG",
           "alt": "Budapest 28",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0673.JPG",
+          "src": "./public/photos/Budapest/IMG_0673.JPG",
           "alt": "Budapest 29",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0674.JPG",
+          "src": "./public/photos/Budapest/IMG_0674.JPG",
           "alt": "Budapest 30",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0675.JPG",
+          "src": "./public/photos/Budapest/IMG_0675.JPG",
           "alt": "Budapest 31",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0676.JPG",
+          "src": "./public/photos/Budapest/IMG_0676.JPG",
           "alt": "Budapest 32",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0678.JPG",
+          "src": "./public/photos/Budapest/IMG_0678.JPG",
           "alt": "Budapest 33",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0679.JPG",
+          "src": "./public/photos/Budapest/IMG_0679.JPG",
           "alt": "Budapest 34",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0681.JPG",
+          "src": "./public/photos/Budapest/IMG_0681.JPG",
           "alt": "Budapest 35",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0683.JPG",
+          "src": "./public/photos/Budapest/IMG_0683.JPG",
           "alt": "Budapest 36",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0685.JPG",
+          "src": "./public/photos/Budapest/IMG_0685.JPG",
           "alt": "Budapest 37",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0686.JPG",
+          "src": "./public/photos/Budapest/IMG_0686.JPG",
           "alt": "Budapest 38",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0690.JPG",
+          "src": "./public/photos/Budapest/IMG_0690.JPG",
           "alt": "Budapest 39",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0693.JPG",
+          "src": "./public/photos/Budapest/IMG_0693.JPG",
           "alt": "Budapest 40",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0695.jpg",
+          "src": "./public/photos/Budapest/IMG_0695.jpg",
           "alt": "Budapest 41",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0698.jpg",
+          "src": "./public/photos/Budapest/IMG_0698.jpg",
           "alt": "Budapest 42",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0701.jpg",
+          "src": "./public/photos/Budapest/IMG_0701.jpg",
           "alt": "Budapest 43",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0703.jpg",
+          "src": "./public/photos/Budapest/IMG_0703.jpg",
           "alt": "Budapest 44",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0704.jpg",
+          "src": "./public/photos/Budapest/IMG_0704.jpg",
           "alt": "Budapest 45",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0706.jpg",
+          "src": "./public/photos/Budapest/IMG_0706.jpg",
           "alt": "Budapest 46",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0708.jpg",
+          "src": "./public/photos/Budapest/IMG_0708.jpg",
           "alt": "Budapest 47",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0709.jpg",
+          "src": "./public/photos/Budapest/IMG_0709.jpg",
           "alt": "Budapest 48",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0713.jpg",
+          "src": "./public/photos/Budapest/IMG_0713.jpg",
           "alt": "Budapest 49",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0714.jpg",
+          "src": "./public/photos/Budapest/IMG_0714.jpg",
           "alt": "Budapest 50",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0715.jpg",
+          "src": "./public/photos/Budapest/IMG_0715.jpg",
           "alt": "Budapest 51",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0716.jpg",
+          "src": "./public/photos/Budapest/IMG_0716.jpg",
           "alt": "Budapest 52",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0717.jpg",
+          "src": "./public/photos/Budapest/IMG_0717.jpg",
           "alt": "Budapest 53",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0720.jpg",
+          "src": "./public/photos/Budapest/IMG_0720.jpg",
           "alt": "Budapest 54",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0722.jpg",
+          "src": "./public/photos/Budapest/IMG_0722.jpg",
           "alt": "Budapest 55",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0723.jpg",
+          "src": "./public/photos/Budapest/IMG_0723.jpg",
           "alt": "Budapest 56",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0725.jpg",
+          "src": "./public/photos/Budapest/IMG_0725.jpg",
           "alt": "Budapest 57",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0727.jpg",
+          "src": "./public/photos/Budapest/IMG_0727.jpg",
           "alt": "Budapest 58",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0728.jpg",
+          "src": "./public/photos/Budapest/IMG_0728.jpg",
           "alt": "Budapest 59",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0731.jpg",
+          "src": "./public/photos/Budapest/IMG_0731.jpg",
           "alt": "Budapest 60",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0732.jpg",
+          "src": "./public/photos/Budapest/IMG_0732.jpg",
           "alt": "Budapest 61",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0736.jpg",
+          "src": "./public/photos/Budapest/IMG_0736.jpg",
           "alt": "Budapest 62",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0737.jpg",
+          "src": "./public/photos/Budapest/IMG_0737.jpg",
           "alt": "Budapest 63",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0738.jpg",
+          "src": "./public/photos/Budapest/IMG_0738.jpg",
           "alt": "Budapest 64",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0739.jpg",
+          "src": "./public/photos/Budapest/IMG_0739.jpg",
           "alt": "Budapest 65",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0740.jpg",
+          "src": "./public/photos/Budapest/IMG_0740.jpg",
           "alt": "Budapest 66",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0741.jpg",
+          "src": "./public/photos/Budapest/IMG_0741.jpg",
           "alt": "Budapest 67",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0742.jpg",
+          "src": "./public/photos/Budapest/IMG_0742.jpg",
           "alt": "Budapest 68",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0743.jpg",
+          "src": "./public/photos/Budapest/IMG_0743.jpg",
           "alt": "Budapest 69",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0746.jpg",
+          "src": "./public/photos/Budapest/IMG_0746.jpg",
           "alt": "Budapest 70",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0747.jpg",
+          "src": "./public/photos/Budapest/IMG_0747.jpg",
           "alt": "Budapest 71",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0749.jpg",
+          "src": "./public/photos/Budapest/IMG_0749.jpg",
           "alt": "Budapest 72",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0763.JPG",
+          "src": "./public/photos/Budapest/IMG_0763.JPG",
           "alt": "Budapest 73",
           "caption": ""
         },
         {
-          "src": "/public/photos/Budapest/IMG_0768.JPG",
+          "src": "./public/photos/Budapest/IMG_0768.JPG",
           "alt": "Budapest 74",
           "caption": ""
         }

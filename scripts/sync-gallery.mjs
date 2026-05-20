@@ -5,6 +5,11 @@ const root = process.cwd();
 const photosRoot = path.join(root, "public", "photos");
 const outputFile = path.join(root, "public", "gallery.json");
 const imageExtensions = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif"]);
+const publicPhotosPrefix = "public/photos";
+
+function toPublicPhotoPath(albumId, fileName) {
+  return `./${path.posix.join(publicPhotosPrefix, albumId, fileName)}`;
+}
 
 function titleFromSlug(slug) {
   return slug
@@ -64,7 +69,7 @@ async function readAlbums() {
         const altPrefix = metadata.title ?? titleFromSlug(albumId);
         const baseAlt = metadata.altPrefix ?? altPrefix;
         return {
-          src: `/public/photos/${albumId}/${fileEntry.name}`,
+          src: toPublicPhotoPath(albumId, fileEntry.name),
           alt: `${baseAlt} ${index + 1}`,
           caption: "",
         };
@@ -76,7 +81,7 @@ async function readAlbums() {
       description: metadata.description ?? "",
       order: Number.isFinite(metadata.order) ? metadata.order : 9999,
       cover: metadata.cover
-        ? `/public/photos/${albumId}/${metadata.cover}`
+        ? toPublicPhotoPath(albumId, metadata.cover)
         : photos[0]?.src ?? "",
       photos,
     });
