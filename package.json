@@ -1,0 +1,10 @@
+{
+  "name": "itaybaror-photography",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "sync:gallery": "node ./scripts/sync-gallery.mjs",
+    "dev": "python3 -m http.server 4173"
+  }
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Itay Baror | Photography</title>
+    <meta
+      name="description"
+      content="Photography portfolio with album selector, masonry gallery, and slideshow view."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="landing-view" class="landing-view" aria-label="Landing">
+      <div class="landing-scene" aria-hidden="true">
+        <div class="scene-glow scene-glow-a"></div>
+        <div class="scene-glow scene-glow-b"></div>
+        <div class="scene-grid"></div>
+      </div>
+
+      <section class="landing-card" aria-label="Intro panel">
+        <header class="landing-card-top">
+          <p>itaybaror</p>
+          <p>photography</p>
+        </header>
+
+        <div class="landing-card-center">
+          <h1>Visual Stories</h1>
+          <p>light, texture, and modern editorial compositions</p>
+        </div>
+
+        <button id="enter-portfolio" type="button" class="enter-button">enter</button>
+      </section>
+    </main>
+
+    <main id="portfolio-view" class="portfolio-view is-hidden" aria-label="Portfolio">
+      <aside class="sidebar">
+        <div>
+          <h1 class="sidebar-title">ITAY BAROR</h1>
+          <p class="sidebar-subtitle">PHOTOGRAPHY</p>
+        </div>
+
+        <div class="sidebar-block">
+          <p class="sidebar-label">ALBUMS</p>
+          <nav id="album-nav" class="album-nav"></nav>
+        </div>
+
+        <div class="sidebar-block sidebar-meta-links">
+          <button id="view-gallery" class="sidebar-link is-active" type="button">GALLERY VIEW</button>
+          <button id="view-slideshow" class="sidebar-link" type="button">SLIDESHOW VIEW</button>
+          <button id="back-home" class="sidebar-link" type="button">BACK TO LANDING</button>
+        </div>
+      </aside>
+
+      <section class="portfolio-content">
+        <header class="content-header">
+          <h2 id="album-title" class="content-title">Albums</h2>
+          <p id="album-description" class="content-description">Select an album to start.</p>
+        </header>
+
+        <section id="gallery-view" class="gallery-view" aria-label="Gallery wall"></section>
+
+        <section id="slideshow-view" class="slideshow-view is-hidden" aria-label="Slideshow">
+          <button id="slide-prev" class="slide-nav" type="button" aria-label="Previous">←</button>
+          <figure class="slide-stage">
+            <img id="slideshow-image" alt="" />
+            <figcaption id="slide-caption"></figcaption>
+          </figure>
+          <button id="slide-next" class="slide-nav" type="button" aria-label="Next">→</button>
+          <p id="slide-counter" class="slide-counter">0 / 0</p>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
