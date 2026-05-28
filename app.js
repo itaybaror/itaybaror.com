@@ -1,6 +1,6 @@
 const GALLERY_PATH = "./public/gallery.json";
 const LANDING_BACKGROUND_INTERVAL = 8000;
-const LANDING_ENTER_ANIMATION_DURATION = 900;
+const LANDING_ENTER_ANIMATION_DURATION = 620;
 
 const landingView = document.querySelector("#landing-view");
 const landingBackgroundElements = [...document.querySelectorAll(".landing-photo-bg")];
@@ -31,16 +31,49 @@ let landingBackgroundIndex = 0;
 let landingBackgroundTimer = null;
 let landingPhotoPool = [];
 let isEnteringPortfolio = false;
+let previousHash = window.location.hash;
 
 function normalizeIndex(index, length) {
   return (index + length) % length;
 }
 
 function showPortfolio(isPortfolioVisible) {
+  landingView.classList.remove("is-sliding-out");
+  landingView.classList.remove("is-sliding-in");
+  portfolioView.classList.remove("is-sliding-in");
+  portfolioView.classList.remove("is-sliding-out");
   landingView.classList.toggle("is-hidden", isPortfolioVisible);
   portfolioView.classList.toggle("is-hidden", !isPortfolioVisible);
   document.documentElement.classList.toggle("is-landing-visible", !isPortfolioVisible);
   document.body.classList.toggle("is-landing-visible", !isPortfolioVisible);
+}
+
+function showLandingWithTransition() {
+  if (isEnteringPortfolio) {
+    return;
+  }
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    showPortfolio(false);
+    return;
+  }
+
+  isEnteringPortfolio = true;
+  backHomeButton.disabled = true;
+  landingView.classList.remove("is-hidden");
+  document.documentElement.classList.add("is-landing-visible");
+  document.body.classList.add("is-landing-visible");
+
+  window.requestAnimationFrame(() => {
+    landingView.classList.add("is-sliding-in");
+    portfolioView.classList.add("is-sliding-out");
+  });
+
+  window.setTimeout(() => {
+    showPortfolio(false);
+    backHomeButton.disabled = false;
+    isEnteringPortfolio = false;
+  }, LANDING_ENTER_ANIMATION_DURATION);
 }
 
 function setSidebarVisibility(isHidden) {
@@ -308,13 +341,19 @@ enterPortfolioButton.addEventListener("click", () => {
   }
 
   isEnteringPortfolio = true;
-  landingView.classList.add("is-entering");
   enterPortfolioButton.disabled = true;
+  portfolioView.classList.remove("is-hidden");
+  document.documentElement.classList.remove("is-landing-visible");
+  document.body.classList.remove("is-landing-visible");
+
+  window.requestAnimationFrame(() => {
+    landingView.classList.add("is-sliding-out");
+    portfolioView.classList.add("is-sliding-in");
+  });
 
   window.setTimeout(() => {
     window.location.hash = "portfolio";
     showPortfolio(true);
-    landingView.classList.remove("is-entering");
     enterPortfolioButton.disabled = false;
     isEnteringPortfolio = false;
   }, LANDING_ENTER_ANIMATION_DURATION);
@@ -322,7 +361,8 @@ enterPortfolioButton.addEventListener("click", () => {
 
 backHomeButton.addEventListener("click", () => {
   history.replaceState(null, "", window.location.pathname);
-  showPortfolio(false);
+  previousHash = "";
+  showLandingWithTransition();
 });
 
 viewGalleryButton.addEventListener("click", () => setMode("gallery"));
@@ -332,22 +372,6 @@ revealSidebarButton.addEventListener("click", () => setSidebarVisibility(false))
 
 previousSlideButton.addEventListener("click", () => moveSlide(-1));
 nextSlideButton.addEventListener("click", () => moveSlide(1));
-
-enterPortfolioButton.addEventListener("pointermove", (event) => {
-  const bounds = enterPortfolioButton.getBoundingClientRect();
-  const pointerX = ((event.clientX - bounds.left) / bounds.width) * 100;
-  const pointerY = ((event.clientY - bounds.top) / bounds.height) * 100;
-
-  enterPortfolioButton.classList.add("is-pointer-active");
-  enterPortfolioButton.style.setProperty("--pointer-x", `${pointerX}%`);
-  enterPortfolioButton.style.setProperty("--pointer-y", `${pointerY}%`);
-});
-
-enterPortfolioButton.addEventListener("pointerleave", () => {
-  enterPortfolioButton.classList.remove("is-pointer-active");
-  enterPortfolioButton.style.setProperty("--pointer-x", "50%");
-  enterPortfolioButton.style.setProperty("--pointer-y", "50%");
-});
 
 slideshowImageElement.addEventListener("animationend", () => {
   slideshowImageElement.classList.remove("slide-enter-left", "slide-enter-right");
@@ -387,7 +411,16 @@ document.addEventListener("keydown", (event) => {
 });
 
 window.addEventListener("hashchange", () => {
-  showPortfolio(window.location.hash === "#portfolio");
+  const currentHash = window.location.hash;
+
+  if (previousHash === "#portfolio" && currentHash !== "#portfolio") {
+    previousHash = currentHash;
+    showLandingWithTransition();
+    return;
+  }
+
+  previousHash = currentHash;
+  showPortfolio(currentHash === "#portfolio");
 });
 
 showPortfolio(window.location.hash === "#portfolio");

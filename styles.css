@@ -51,26 +51,6 @@ button {
   background-image: var(--page-edge-bg);
 }
 
-.landing-view::before {
-  content: "";
-  position: absolute;
-  z-index: 3;
-  left: 50%;
-  top: 88%;
-  width: 14rem;
-  height: 14rem;
-  border-radius: 999px;
-  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.58) 34%, rgba(255, 255, 255, 0.2) 62%, rgba(255, 255, 255, 0) 78%);
-  box-shadow: inset 0 0 42px rgba(255, 255, 255, 0.76), 0 0 80px rgba(255, 255, 255, 0.34);
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(-50%, -50%) scale(0.08);
-}
-
-.landing-view.is-entering::before {
-  animation: liquid-page-wipe 0.95s cubic-bezier(0.2, 0.78, 0.22, 1) forwards;
-}
-
 .landing-scene {
   position: absolute;
   inset: -5%;
@@ -160,6 +140,39 @@ button {
   text-shadow: 0 10px 44px rgba(0, 0, 0, 0.72);
 }
 
+.landing-view.is-sliding-out,
+.landing-view.is-sliding-in,
+.portfolio-view.is-sliding-in,
+.portfolio-view.is-sliding-out {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.landing-view.is-sliding-out {
+  z-index: 2;
+  animation: landing-slide-out 0.62s cubic-bezier(0.68, 0, 0.32, 1) forwards;
+}
+
+.landing-view.is-sliding-in {
+  z-index: 3;
+  animation: landing-slide-in 0.62s cubic-bezier(0.68, 0, 0.32, 1) forwards;
+}
+
+.portfolio-view.is-sliding-in {
+  z-index: 3;
+  animation: portfolio-slide-in 0.62s cubic-bezier(0.68, 0, 0.32, 1) forwards;
+}
+
+.portfolio-view.is-sliding-out {
+  z-index: 2;
+  animation: portfolio-slide-out 0.62s cubic-bezier(0.68, 0, 0.32, 1) forwards;
+}
+
 .landing-card-center {
   display: grid;
   place-content: start;
@@ -192,53 +205,38 @@ button {
 }
 
 .enter-button {
-  --pointer-x: 50%;
-  --pointer-y: 50%;
   justify-self: center;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 168px;
   position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.08));
-  backdrop-filter: blur(34px) saturate(1.85) contrast(1.08);
-  color: rgba(255, 255, 255, 0.88);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #ffffff;
   text-transform: none;
   letter-spacing: 0;
-  font-weight: 700;
-  font-size: 1.08rem;
-  padding: 0.98rem 1.75rem;
+  font-weight: 800;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  padding: 0.45rem 0;
   cursor: pointer;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.56), inset 0 -1px 2px rgba(0, 0, 0, 0.14),
-    inset 18px 12px 32px rgba(255, 255, 255, 0.08), inset -18px -18px 36px rgba(0, 0, 0, 0.05),
-    0 16px 42px rgba(0, 0, 0, 0.3);
-  transition: border-color 0.2s ease, color 0.2s ease, transform 0.22s ease, box-shadow 0.22s ease;
-}
-
-.enter-button::before {
-  content: "";
-  position: absolute;
-  inset: 2px 9px auto;
-  height: 42%;
-  border-radius: inherit;
-  background: linear-gradient(rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0));
-  opacity: 0.72;
-  pointer-events: none;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.92), 0 8px 28px rgba(0, 0, 0, 0.72);
+  transition: color 0.18s ease, transform 0.2s ease, text-shadow 0.2s ease;
 }
 
 .enter-button::after {
   content: "";
   position: absolute;
-  inset: 0;
-  border-radius: 999px;
-  background: radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.12) 26%, rgba(255, 255, 255, 0) 58%);
-  opacity: 0;
+  left: 0;
+  right: 0;
+  bottom: 0.22rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.72;
   pointer-events: none;
-  transition: opacity 0.16s ease;
-  will-change: opacity;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .enter-button span {
@@ -246,58 +244,21 @@ button {
   z-index: 1;
 }
 
-.enter-button:hover {
-  border-color: rgba(255, 255, 255, 0.72);
+.enter-button:hover,
+.enter-button:focus-visible {
   color: #ffffff;
-  transform: translateY(-2px) scale(1.035);
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.72), inset 0 -1px 2px rgba(0, 0, 0, 0.14),
-    inset 20px 14px 34px rgba(255, 255, 255, 0.12), inset -20px -18px 38px rgba(0, 0, 0, 0.06),
-    0 22px 56px rgba(0, 0, 0, 0.34);
+  outline: none;
+  transform: translateY(-2px);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 1), 0 12px 34px rgba(0, 0, 0, 0.82);
 }
 
-.enter-button.is-pointer-active::after {
-  opacity: 1;
+.enter-button:hover::after,
+.enter-button:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .enter-button:active {
-  transform: translateY(0) scale(0.97);
-}
-
-.landing-view.is-entering .enter-button {
-  animation: liquid-button-press 0.55s ease forwards;
-}
-
-@keyframes liquid-button-press {
-  0% {
-    transform: scale(1);
-  }
-
-  45% {
-    transform: scale(0.92);
-  }
-
-  100% {
-    transform: scale(1.08);
-    opacity: 0;
-  }
-}
-
-@keyframes liquid-page-wipe {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.08);
-    filter: blur(12px);
-  }
-
-  30% {
-    opacity: 0.9;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(16);
-    filter: blur(2px);
-  }
+  transform: translateY(0);
 }
 
 /* Portfolio */
@@ -308,6 +269,46 @@ button {
   min-height: 100vh;
   position: relative;
   background: #ffffff;
+}
+
+@keyframes landing-slide-out {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes landing-slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes portfolio-slide-in {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes portfolio-slide-out {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
 }
 
 .sidebar {
