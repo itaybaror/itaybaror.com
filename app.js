@@ -77,8 +77,24 @@ function getRandomPhoto(excludedPhoto = null) {
   return nextPhoto;
 }
 
-function setLandingBackground(photo) {
+function preloadPhoto(src) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve(src);
+    image.onerror = reject;
+    image.src = src;
+  });
+}
+
+async function setLandingBackground(photo) {
   if (!photo || landingBackgroundElements.length < 2) {
+    return;
+  }
+
+  try {
+    await preloadPhoto(photo.src);
+  } catch (error) {
+    console.warn(`Skipping landing background that could not load: ${photo.src}`, error);
     return;
   }
 
@@ -86,19 +102,20 @@ function setLandingBackground(photo) {
   const activeElement = landingBackgroundElements[landingBackgroundIndex];
 
   activeElement.style.setProperty("--landing-photo", `url("${photo.src}")`);
+  landingView.classList.add("has-landing-photo");
   for (const element of landingBackgroundElements) {
     element.classList.toggle("is-active", element === activeElement);
   }
 }
 
-function startLandingBackgroundRotation() {
+async function startLandingBackgroundRotation() {
   landingPhotoPool = getAllGalleryPhotos();
   if (!landingPhotoPool.length || landingBackgroundElements.length < 2) {
     return;
   }
 
   const firstPhoto = getRandomPhoto();
-  landingBackgroundElements[landingBackgroundIndex].style.setProperty("--landing-photo", `url("${firstPhoto.src}")`);
+  await setLandingBackground(firstPhoto);
 
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     return;
@@ -108,7 +125,7 @@ function startLandingBackgroundRotation() {
     const currentPhoto = landingPhotoPool.find(
       (photo) => landingBackgroundElements[landingBackgroundIndex].style.getPropertyValue("--landing-photo").includes(photo.src),
     );
-    setLandingBackground(getRandomPhoto(currentPhoto));
+    void setLandingBackground(getRandomPhoto(currentPhoto));
   }, LANDING_BACKGROUND_INTERVAL);
 }
 

@@ -42,7 +42,7 @@ button {
   place-items: center;
   padding: 1.2rem;
   overflow: hidden;
-  background: radial-gradient(120% 100% at 10% 10%, #1a2e44 0%, #091120 60%, #05090f 100%);
+  background: #05090f;
 }
 
 .landing-view::before {
@@ -98,7 +98,12 @@ button {
   position: absolute;
   border-radius: 999px;
   filter: blur(50px);
-  opacity: 0.28;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+
+.landing-view.has-landing-photo .scene-glow {
+  opacity: 0.16;
 }
 
 .scene-glow-a {
@@ -128,7 +133,12 @@ button {
     linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
   background-size: 70px 70px;
   mask-image: radial-gradient(circle at center, black 35%, transparent 90%);
-  opacity: 0.7;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+
+.landing-view.has-landing-photo .scene-grid {
+  opacity: 0.45;
 }
 
 .landing-card {
@@ -787,8 +797,26 @@ button {
 }
 
 @media (max-width: 640px) {
+  .landing-view {
+    align-items: stretch;
+    justify-items: stretch;
+    padding: 0;
+  }
+
   .landing-card {
-    min-height: 76vh;
+    min-height: 100vh;
+    padding: max(1.1rem, env(safe-area-inset-top)) 1.05rem 1.6rem;
+  }
+
+  .landing-brand h1 {
+    font-size: clamp(3.9rem, 19vw, 5.1rem);
+    line-height: 0.82;
+  }
+
+  .landing-brand p {
+    margin-top: 0.48rem;
+    font-size: clamp(1rem, 5vw, 1.28rem);
+    transform: translateX(0.14em);
   }
 
   .portfolio-content {
