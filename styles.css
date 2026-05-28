@@ -8,6 +8,7 @@
   --accent: #d0a02c;
   --white: #ffffff;
   --page-edge-bg: linear-gradient(180deg, #2d2a27 0%, #05090f 18%, #05090f 82%, #2f3030 100%);
+  --landing-photo: url("./public/landing/landing-01.jpg");
 }
 
 * {

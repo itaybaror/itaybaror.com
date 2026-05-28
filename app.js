@@ -1,6 +1,14 @@
 const GALLERY_PATH = "./public/gallery.json";
 const LANDING_BACKGROUND_INTERVAL = 8000;
 const LANDING_ENTER_ANIMATION_DURATION = 620;
+const LANDING_PHOTOS = [
+  { src: "./public/landing/landing-01.jpg", alt: "Landing photo 1" },
+  { src: "./public/landing/landing-02.jpg", alt: "Landing photo 2" },
+  { src: "./public/landing/landing-03.jpg", alt: "Landing photo 3" },
+  { src: "./public/landing/landing-04.jpg", alt: "Landing photo 4" },
+  { src: "./public/landing/landing-05.jpg", alt: "Landing photo 5" },
+  { src: "./public/landing/landing-06.jpg", alt: "Landing photo 6" },
+];
 
 const landingView = document.querySelector("#landing-view");
 const landingBackgroundElements = [...document.querySelectorAll(".landing-photo-bg")];
@@ -149,12 +157,13 @@ async function setLandingBackground(photo) {
 }
 
 async function startLandingBackgroundRotation() {
-  landingPhotoPool = getAllGalleryPhotos();
+  window.clearInterval(landingBackgroundTimer);
+  landingPhotoPool = LANDING_PHOTOS.length ? LANDING_PHOTOS : getAllGalleryPhotos();
   if (!landingPhotoPool.length || landingBackgroundElements.length < 2) {
     return;
   }
 
-  const firstPhoto = getRandomPhoto();
+  const firstPhoto = landingPhotoPool[0];
   await setLandingBackground(firstPhoto);
 
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -332,8 +341,6 @@ async function loadGallery() {
   }
 
   renderActiveAlbum();
-  window.clearInterval(landingBackgroundTimer);
-  startLandingBackgroundRotation();
 }
 
 enterPortfolioButton.addEventListener("click", () => {
@@ -455,4 +462,5 @@ window.addEventListener("hashchange", () => {
 showPortfolio(window.location.hash === "#portfolio");
 setMode("gallery");
 setSidebarVisibility(isMobilePortfolioLayout());
+startLandingBackgroundRotation();
 loadGallery();

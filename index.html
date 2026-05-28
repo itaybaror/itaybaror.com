@@ -16,12 +16,13 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Manrope:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" as="image" href="./public/landing/landing-01.jpg" fetchpriority="high" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="is-landing-visible">
-    <main id="landing-view" class="landing-view" aria-label="Landing">
+    <main id="landing-view" class="landing-view has-landing-photo" aria-label="Landing">
       <div class="landing-scene" aria-hidden="true">
-        <div class="landing-photo-bg"></div>
+        <div class="landing-photo-bg is-active"></div>
         <div class="landing-photo-bg"></div>
         <div class="scene-glow scene-glow-a"></div>
         <div class="scene-glow scene-glow-b"></div>
