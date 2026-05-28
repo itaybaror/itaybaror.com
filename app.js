@@ -285,8 +285,13 @@ function renderGallery(album) {
     const image = document.createElement("img");
     image.src = photo.src;
     image.alt = photo.alt ?? `${album.title} photo ${index + 1}`;
-    image.loading = "lazy";
+    if (Number.isFinite(photo.width) && Number.isFinite(photo.height)) {
+      image.width = photo.width;
+      image.height = photo.height;
+    }
+    image.loading = index < 6 ? "eager" : "lazy";
     image.decoding = "async";
+    image.fetchPriority = index < 6 ? "high" : "auto";
 
     const label = document.createElement("span");
     label.className = "gallery-item-label";

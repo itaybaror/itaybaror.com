@@ -19,6 +19,85 @@ function titleFromSlug(slug) {
     .join(" ");
 }
 
+function readPngDimensions(buffer) {
+  const isPng =
+    buffer.length >= 24 &&
+    buffer[0] === 0x89 &&
+    buffer[1] === 0x50 &&
+    buffer[2] === 0x4e &&
+    buffer[3] === 0x47;
+
+  if (!isPng) {
+    return null;
+  }
+
+  return {
+    width: buffer.readUInt32BE(16),
+    height: buffer.readUInt32BE(20),
+  };
+}
+
+function readGifDimensions(buffer) {
+  const signature = buffer.subarray(0, 6).toString("ascii");
+  if (signature !== "GIF87a" && signature !== "GIF89a") {
+    return null;
+  }
+
+  return {
+    width: buffer.readUInt16LE(6),
+    height: buffer.readUInt16LE(8),
+  };
+}
+
+function readJpegDimensions(buffer) {
+  if (buffer.length < 4 || buffer[0] !== 0xff || buffer[1] !== 0xd8) {
+    return null;
+  }
+
+  const startOfFrameMarkers = new Set([
+    0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf,
+  ]);
+  let offset = 2;
+
+  while (offset < buffer.length) {
+    while (buffer[offset] === 0xff) {
+      offset += 1;
+    }
+
+    const marker = buffer[offset];
+    offset += 1;
+
+    if (marker === 0xda || marker === 0xd9) {
+      break;
+    }
+
+    if (offset + 2 > buffer.length) {
+      break;
+    }
+
+    const segmentLength = buffer.readUInt16BE(offset);
+    if (segmentLength < 2 || offset + segmentLength > buffer.length) {
+      break;
+    }
+
+    if (startOfFrameMarkers.has(marker) && segmentLength >= 7) {
+      return {
+        height: buffer.readUInt16BE(offset + 3),
+        width: buffer.readUInt16BE(offset + 5),
+      };
+    }
+
+    offset += segmentLength;
+  }
+
+  return null;
+}
+
+async function readImageDimensions(filePath) {
+  const buffer = await fs.readFile(filePath);
+  return readJpegDimensions(buffer) ?? readPngDimensions(buffer) ?? readGifDimensions(buffer);
+}
+
 async function fileExists(filePath) {
   try {
     await fs.access(filePath);
@@ -56,7 +135,7 @@ async function readAlbums() {
     const metadata = await readOptionalMetadata(albumPath);
     const files = await fs.readdir(albumPath, { withFileTypes: true });
 
-    const photos = files
+    const imageFiles = files
       .filter((fileEntry) => {
         if (!fileEntry.isFile() || fileEntry.name.startsWith(".")) {
           return false;
@@ -64,16 +143,20 @@ async function readAlbums() {
         const ext = path.extname(fileEntry.name).toLowerCase();
         return imageExtensions.has(ext);
       })
-      .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }))
-      .map((fileEntry, index) => {
-        const altPrefix = metadata.title ?? titleFromSlug(albumId);
-        const baseAlt = metadata.altPrefix ?? altPrefix;
-        return {
-          src: toPublicPhotoPath(albumId, fileEntry.name),
-          alt: `${baseAlt} ${index + 1}`,
-          caption: "",
-        };
+      .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
+
+    const photos = [];
+    for (const [index, fileEntry] of imageFiles.entries()) {
+      const altPrefix = metadata.title ?? titleFromSlug(albumId);
+      const baseAlt = metadata.altPrefix ?? altPrefix;
+      const dimensions = await readImageDimensions(path.join(albumPath, fileEntry.name));
+      photos.push({
+        src: toPublicPhotoPath(albumId, fileEntry.name),
+        alt: `${baseAlt} ${index + 1}`,
+        caption: "",
+        ...(dimensions ?? {}),
       });
+    }
 
     albums.push({
       id: albumId,
