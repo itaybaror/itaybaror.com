@@ -39,6 +39,8 @@ function normalizeIndex(index, length) {
 function showPortfolio(isPortfolioVisible) {
   landingView.classList.toggle("is-hidden", isPortfolioVisible);
   portfolioView.classList.toggle("is-hidden", !isPortfolioVisible);
+  document.documentElement.classList.toggle("is-landing-visible", !isPortfolioVisible);
+  document.body.classList.toggle("is-landing-visible", !isPortfolioVisible);
 }
 
 function setSidebarVisibility(isHidden) {
@@ -102,6 +104,7 @@ async function setLandingBackground(photo) {
   const activeElement = landingBackgroundElements[landingBackgroundIndex];
 
   activeElement.style.setProperty("--landing-photo", `url("${photo.src}")`);
+  document.documentElement.style.setProperty("--landing-photo", `url("${photo.src}")`);
   landingView.classList.add("has-landing-photo");
   for (const element of landingBackgroundElements) {
     element.classList.toggle("is-active", element === activeElement);
