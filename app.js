@@ -37,6 +37,10 @@ function normalizeIndex(index, length) {
   return (index + length) % length;
 }
 
+function isMobilePortfolioLayout() {
+  return window.matchMedia("(max-width: 980px)").matches;
+}
+
 function showPortfolio(isPortfolioVisible) {
   landingView.classList.remove("is-sliding-out");
   landingView.classList.remove("is-sliding-in");
@@ -246,6 +250,9 @@ function renderAlbumNav() {
       activeAlbumId = album.id;
       slideIndex = 0;
       renderActiveAlbum();
+      if (isMobilePortfolioLayout()) {
+        setSidebarVisibility(true);
+      }
     });
 
     albumNavElement.append(button);
@@ -365,10 +372,32 @@ backHomeButton.addEventListener("click", () => {
   showLandingWithTransition();
 });
 
-viewGalleryButton.addEventListener("click", () => setMode("gallery"));
-viewSlideshowButton.addEventListener("click", () => setMode("slideshow"));
+viewGalleryButton.addEventListener("click", () => {
+  setMode("gallery");
+  if (isMobilePortfolioLayout()) {
+    setSidebarVisibility(true);
+  }
+});
+viewSlideshowButton.addEventListener("click", () => {
+  setMode("slideshow");
+  if (isMobilePortfolioLayout()) {
+    setSidebarVisibility(true);
+  }
+});
 toggleSidebarButton.addEventListener("click", () => setSidebarVisibility(!sidebarHidden));
-revealSidebarButton.addEventListener("click", () => setSidebarVisibility(false));
+revealSidebarButton.addEventListener("click", (event) => {
+  event.stopPropagation();
+  setSidebarVisibility(isMobilePortfolioLayout() ? !sidebarHidden : false);
+});
+portfolioView.addEventListener("click", (event) => {
+  if (!isMobilePortfolioLayout() || sidebarHidden) {
+    return;
+  }
+
+  if (!event.target.closest(".sidebar")) {
+    setSidebarVisibility(true);
+  }
+});
 
 previousSlideButton.addEventListener("click", () => moveSlide(-1));
 nextSlideButton.addEventListener("click", () => moveSlide(1));
@@ -425,5 +454,5 @@ window.addEventListener("hashchange", () => {
 
 showPortfolio(window.location.hash === "#portfolio");
 setMode("gallery");
-setSidebarVisibility(false);
+setSidebarVisibility(isMobilePortfolioLayout());
 loadGallery();

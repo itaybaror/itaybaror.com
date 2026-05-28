@@ -451,14 +451,28 @@ button {
 }
 
 .content-header {
+  position: sticky;
+  top: 0;
+  z-index: 8;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 1rem;
   padding: 0 0.2rem 0.8rem;
+  background: #ffffff;
+}
+
+.content-header::before {
+  content: "";
+  position: absolute;
+  inset: calc(-1 * var(--panel-top)) -1rem 0 -1rem;
+  z-index: 0;
+  background: #ffffff;
 }
 
 .content-heading {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -546,24 +560,41 @@ button {
 .reveal-icon {
   position: relative;
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+}
+
+.reveal-icon::before,
+.reveal-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
 }
 
 .reveal-icon::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-right: 4px solid currentColor;
-  border-bottom: 4px solid currentColor;
-  transform: rotate(-45deg);
-  transform-origin: center;
+  top: -7px;
+}
+
+.reveal-icon::after {
+  top: 7px;
 }
 
 .portfolio-view.sidebar-hidden .reveal-sidebar {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+@media (min-width: 981px) {
+  .portfolio-view:not(.sidebar-hidden) .reveal-sidebar {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+  }
 }
 
 .reveal-sidebar:hover {
@@ -762,32 +793,115 @@ button {
     overflow: auto;
   }
 
+  .portfolio-view {
+    height: auto;
+    min-height: 100vh;
+  }
+
   .sidebar {
-    position: static;
-    width: auto;
-    transform: none !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    box-shadow: none;
-    grid-template-rows: auto auto auto;
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: min(82vw, 310px);
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.18);
+    grid-template-rows: auto auto 1fr;
+    z-index: 21;
+  }
+
+  .portfolio-view:not(.sidebar-hidden) .sidebar {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .portfolio-view:not(.sidebar-hidden)::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    background: rgba(0, 0, 0, 0.18);
   }
 
   .portfolio-content {
     margin-left: 0;
     height: auto;
     min-height: auto;
-    padding-top: 1rem;
+    padding-top: 0;
     overflow: visible;
+  }
+
+  .content-header {
+    position: sticky;
+    top: 0;
+    z-index: 8;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(18px);
+    padding: max(0.85rem, env(safe-area-inset-top)) 4.5rem 0.85rem 0.9rem;
   }
 
   .gallery-view {
     columns: 2 220px;
     min-height: auto;
+    padding-top: 0.75rem;
   }
 
-  .menu-chevron,
   .reveal-sidebar {
-    display: none;
+    display: grid !important;
+    position: fixed;
+    top: auto !important;
+    right: auto !important;
+    bottom: max(20px, env(safe-area-inset-bottom));
+    left: max(16px, env(safe-area-inset-left));
+    z-index: 30;
+    width: 56px;
+    height: 56px;
+    border: 1px solid #b8b8b8;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #5a5a5a;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  }
+
+  .portfolio-view.sidebar-hidden .reveal-sidebar {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .portfolio-view:not(.sidebar-hidden) .reveal-sidebar {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translateY(8px) !important;
+  }
+
+  .reveal-sidebar:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  }
+
+  .sidebar-meta-links {
+    grid-template-columns: 1fr auto;
+    align-items: end;
+  }
+
+  .menu-chevron {
+    display: grid;
+    width: 62px;
+    height: 62px;
+    align-self: end;
+    background: transparent !important;
+    color: #5f5f5f;
+    font-size: 2.5rem;
+  }
+
+  .portfolio-view.sidebar-hidden .menu-chevron {
+    opacity: 0;
+    pointer-events: none;
+    transform: none;
   }
 
   .content-heading {
