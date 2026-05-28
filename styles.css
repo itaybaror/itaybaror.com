@@ -214,17 +214,13 @@ button {
 .enter-button::after {
   content: "";
   position: absolute;
-  left: var(--pointer-x);
-  top: var(--pointer-y);
-  width: 6.4rem;
-  height: 6.4rem;
+  inset: 0;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0));
-  filter: blur(18px);
+  background: radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.12) 26%, rgba(255, 255, 255, 0) 58%);
   opacity: 0;
   pointer-events: none;
-  transform: translate(-50%, -50%) scale(0.72);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.16s ease;
+  will-change: opacity;
 }
 
 .enter-button span {
@@ -243,7 +239,6 @@ button {
 
 .enter-button.is-pointer-active::after {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
 }
 
 .enter-button:active {
