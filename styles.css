@@ -184,7 +184,7 @@ button {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: clamp(5.8rem, 18vw, 18rem);
+  font-size: clamp(2.9rem, 9vw, 9rem);
   color: #ffffff;
   letter-spacing: 0;
   line-height: 0.78;
@@ -195,10 +195,10 @@ button {
 }
 
 .landing-brand p {
-  margin: 1.05rem 0 0;
+  margin: 0.54rem 0 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: clamp(1.8rem, 4.2vw, 4.4rem);
+  font-size: clamp(0.9rem, 2.1vw, 2.2rem);
   color: #ffffff;
   letter-spacing: 0;
   line-height: 1.08;
