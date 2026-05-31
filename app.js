@@ -28,6 +28,7 @@ const slideshowViewElement = document.querySelector("#slideshow-view");
 const slideshowImageElement = document.querySelector("#slideshow-image");
 const slideCaptionElement = document.querySelector("#slide-caption");
 const slideCounterElement = document.querySelector("#slide-counter");
+const closeSlideshowButton = document.querySelector("#close-slideshow");
 const previousSlideButton = document.querySelector("#slide-prev");
 const nextSlideButton = document.querySelector("#slide-next");
 
@@ -397,6 +398,7 @@ viewSlideshowButton.addEventListener("click", () => {
     setSidebarVisibility(true);
   }
 });
+closeSlideshowButton.addEventListener("click", () => setMode("gallery"));
 toggleSidebarButton.addEventListener("click", () => setSidebarVisibility(!sidebarHidden));
 revealSidebarButton.addEventListener("click", (event) => {
   event.stopPropagation();
