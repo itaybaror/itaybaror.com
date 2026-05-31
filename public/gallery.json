@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T08:06:52.764Z",
+  "generatedAt": "2026-05-31T08:57:13.023Z",
   "albums": [
     {
       "id": "Budapest",
@@ -241,6 +241,238 @@
         {
           "src": "./public/photos/Budapest/IMG_0772.jpg",
           "alt": "Budapest 34",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        }
+      ]
+    },
+    {
+      "id": "Salzburg",
+      "title": "Salzburg",
+      "description": "",
+      "cover": "./public/photos/Salzburg/IMG_1175.jpg",
+      "photos": [
+        {
+          "src": "./public/photos/Salzburg/IMG_1175.jpg",
+          "alt": "Salzburg 1",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1178.jpg",
+          "alt": "Salzburg 2",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1182.jpg",
+          "alt": "Salzburg 3",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1189.jpg",
+          "alt": "Salzburg 4",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1207.jpg",
+          "alt": "Salzburg 5",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1215.jpg",
+          "alt": "Salzburg 6",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1223.jpg",
+          "alt": "Salzburg 7",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1237.jpg",
+          "alt": "Salzburg 8",
+          "caption": "",
+          "height": 3762,
+          "width": 5644
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1243.jpg",
+          "alt": "Salzburg 9",
+          "caption": "",
+          "height": 3784,
+          "width": 5676
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1246.jpg",
+          "alt": "Salzburg 10",
+          "caption": "",
+          "height": 5665,
+          "width": 3777
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1249.jpg",
+          "alt": "Salzburg 11",
+          "caption": "",
+          "height": 5776,
+          "width": 3850
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1252.jpg",
+          "alt": "Salzburg 12",
+          "caption": "",
+          "height": 3718,
+          "width": 5578
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1261.jpg",
+          "alt": "Salzburg 13",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1271.jpg",
+          "alt": "Salzburg 14",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1275.jpg",
+          "alt": "Salzburg 15",
+          "caption": "",
+          "height": 6000,
+          "width": 4000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1277.jpg",
+          "alt": "Salzburg 16",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1279.jpg",
+          "alt": "Salzburg 17",
+          "caption": "",
+          "height": 3846,
+          "width": 5769
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1282.jpg",
+          "alt": "Salzburg 18",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1291.jpg",
+          "alt": "Salzburg 19",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1293.jpg",
+          "alt": "Salzburg 20",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1295.jpg",
+          "alt": "Salzburg 21",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1309.jpg",
+          "alt": "Salzburg 22",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1314.jpg",
+          "alt": "Salzburg 23",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1315.jpg",
+          "alt": "Salzburg 24",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1323.jpg",
+          "alt": "Salzburg 25",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1330.jpg",
+          "alt": "Salzburg 26",
+          "caption": "",
+          "height": 3850,
+          "width": 5776
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1334.jpg",
+          "alt": "Salzburg 27",
+          "caption": "",
+          "height": 6000,
+          "width": 4000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1337.jpg",
+          "alt": "Salzburg 28",
+          "caption": "",
+          "height": 5554,
+          "width": 3703
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1341.jpg",
+          "alt": "Salzburg 29",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1355.jpg",
+          "alt": "Salzburg 30",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1368.jpg",
+          "alt": "Salzburg 31",
+          "caption": "",
+          "height": 3944,
+          "width": 5916
+        },
+        {
+          "src": "./public/photos/Salzburg/IMG_1370.jpg",
+          "alt": "Salzburg 32",
           "caption": "",
           "height": 4000,
           "width": 6000
