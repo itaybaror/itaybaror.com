@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T10:43:57.308Z",
+  "generatedAt": "2026-05-31T11:05:13.603Z",
   "albums": [
     {
       "id": "Austrian Alps",
@@ -536,6 +536,217 @@
         {
           "src": "./public/photos/Budapest/IMG_0772.jpg",
           "alt": "Budapest 34",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        }
+      ]
+    },
+    {
+      "id": "Innsbruck",
+      "title": "Innsbruck",
+      "description": "",
+      "cover": "./public/photos/Innsbruck/IMG_1599.jpg",
+      "photos": [
+        {
+          "src": "./public/photos/Innsbruck/IMG_1599.jpg",
+          "alt": "Innsbruck 1",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1608.jpg",
+          "alt": "Innsbruck 2",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1612.jpg",
+          "alt": "Innsbruck 3",
+          "caption": "",
+          "height": 3857,
+          "width": 5786
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1614.jpg",
+          "alt": "Innsbruck 4",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1618.jpg",
+          "alt": "Innsbruck 5",
+          "caption": "",
+          "height": 3857,
+          "width": 5786
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1620.jpg",
+          "alt": "Innsbruck 6",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1622.jpg",
+          "alt": "Innsbruck 7",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1625.jpg",
+          "alt": "Innsbruck 8",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1626.jpg",
+          "alt": "Innsbruck 9",
+          "caption": "",
+          "height": 5946,
+          "width": 3964
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1627.jpg",
+          "alt": "Innsbruck 10",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1629.jpg",
+          "alt": "Innsbruck 11",
+          "caption": "",
+          "height": 3757,
+          "width": 5635
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1630.jpg",
+          "alt": "Innsbruck 12",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1632.jpg",
+          "alt": "Innsbruck 13",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1636.jpg",
+          "alt": "Innsbruck 14",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1637.jpg",
+          "alt": "Innsbruck 15",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1640.jpg",
+          "alt": "Innsbruck 16",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1646.jpg",
+          "alt": "Innsbruck 17",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1651.jpg",
+          "alt": "Innsbruck 18",
+          "caption": "",
+          "height": 3788,
+          "width": 5683
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1655.jpg",
+          "alt": "Innsbruck 19",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1658.jpg",
+          "alt": "Innsbruck 20",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1660.jpg",
+          "alt": "Innsbruck 21",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1661.jpg",
+          "alt": "Innsbruck 22",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1665.jpg",
+          "alt": "Innsbruck 23",
+          "caption": "",
+          "height": 3857,
+          "width": 5786
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1671.jpg",
+          "alt": "Innsbruck 24",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1673.jpg",
+          "alt": "Innsbruck 25",
+          "caption": "",
+          "height": 3803,
+          "width": 5705
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1679.jpg",
+          "alt": "Innsbruck 26",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1684.jpg",
+          "alt": "Innsbruck 27",
+          "caption": "",
+          "height": 3858,
+          "width": 5786
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1689.jpg",
+          "alt": "Innsbruck 28",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Innsbruck/IMG_1691.jpg",
+          "alt": "Innsbruck 29",
           "caption": "",
           "height": 4000,
           "width": 6000
