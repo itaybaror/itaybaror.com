@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28T17:40:39.272Z",
+  "generatedAt": "2026-05-31T08:06:52.764Z",
   "albums": [
     {
       "id": "Budapest",
@@ -241,6 +241,350 @@
         {
           "src": "./public/photos/Budapest/IMG_0772.jpg",
           "alt": "Budapest 34",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        }
+      ]
+    },
+    {
+      "id": "Vienna",
+      "title": "Vienna",
+      "description": "",
+      "cover": "./public/photos/Vienna/IMG_0798.jpg",
+      "photos": [
+        {
+          "src": "./public/photos/Vienna/IMG_0798.jpg",
+          "alt": "Vienna 1",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0803.jpg",
+          "alt": "Vienna 2",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0811.jpg",
+          "alt": "Vienna 3",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0816.jpg",
+          "alt": "Vienna 4",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0817.jpg",
+          "alt": "Vienna 5",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0821.jpg",
+          "alt": "Vienna 6",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0828.jpg",
+          "alt": "Vienna 7",
+          "caption": "",
+          "height": 3704,
+          "width": 5556
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0830.jpg",
+          "alt": "Vienna 8",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0834.jpg",
+          "alt": "Vienna 9",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0841.jpg",
+          "alt": "Vienna 10",
+          "caption": "",
+          "height": 3574,
+          "width": 5360
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0842.jpg",
+          "alt": "Vienna 11",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0847.jpg",
+          "alt": "Vienna 12",
+          "caption": "",
+          "height": 3984,
+          "width": 5978
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0860.jpg",
+          "alt": "Vienna 13",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0867.jpg",
+          "alt": "Vienna 14",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0874.jpg",
+          "alt": "Vienna 15",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0884.jpg",
+          "alt": "Vienna 16",
+          "caption": "",
+          "height": 2758,
+          "width": 4138
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0886.jpg",
+          "alt": "Vienna 17",
+          "caption": "",
+          "height": 6000,
+          "width": 4000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0887.jpg",
+          "alt": "Vienna 18",
+          "caption": "",
+          "height": 3214,
+          "width": 4820
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0890.jpg",
+          "alt": "Vienna 19",
+          "caption": "",
+          "height": 5446,
+          "width": 3630
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0892.jpg",
+          "alt": "Vienna 20",
+          "caption": "",
+          "height": 3716,
+          "width": 5574
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0900.jpg",
+          "alt": "Vienna 21",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0905.jpg",
+          "alt": "Vienna 22",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0910.jpg",
+          "alt": "Vienna 23",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0923.jpg",
+          "alt": "Vienna 24",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0927.jpg",
+          "alt": "Vienna 25",
+          "caption": "",
+          "height": 5790,
+          "width": 3860
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0935.jpg",
+          "alt": "Vienna 26",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0938.jpg",
+          "alt": "Vienna 27",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0947.jpg",
+          "alt": "Vienna 28",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0953.jpg",
+          "alt": "Vienna 29",
+          "caption": "",
+          "height": 5913,
+          "width": 3940
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0961.jpg",
+          "alt": "Vienna 30",
+          "caption": "",
+          "height": 6000,
+          "width": 4000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0971.jpg",
+          "alt": "Vienna 31",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0976.jpg",
+          "alt": "Vienna 32",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0989.jpg",
+          "alt": "Vienna 33",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0991.jpg",
+          "alt": "Vienna 34",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_0996.jpg",
+          "alt": "Vienna 35",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_1005.jpg",
+          "alt": "Vienna 36",
+          "caption": "",
+          "height": 3631,
+          "width": 5446
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_1042.jpg",
+          "alt": "Vienna 37",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_1067.jpg",
+          "alt": "Vienna 38",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_1068.jpg",
+          "alt": "Vienna 39",
+          "caption": "",
+          "height": 6000,
+          "width": 4000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_1072.jpg",
+          "alt": "Vienna 40",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_1075.jpg",
+          "alt": "Vienna 41",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_1085.jpg",
+          "alt": "Vienna 42",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_1088.jpg",
+          "alt": "Vienna 43",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_1094.jpg",
+          "alt": "Vienna 44",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_1112.jpg",
+          "alt": "Vienna 45",
+          "caption": "",
+          "height": 5653,
+          "width": 3769
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_1124.jpg",
+          "alt": "Vienna 46",
+          "caption": "",
+          "height": 6000,
+          "width": 4000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_1127.jpg",
+          "alt": "Vienna 47",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Vienna/IMG_1128.jpg",
+          "alt": "Vienna 48",
           "caption": "",
           "height": 4000,
           "width": 6000
