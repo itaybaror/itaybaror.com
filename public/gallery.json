@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T11:05:13.603Z",
+  "generatedAt": "2026-05-31T11:19:55.598Z",
   "albums": [
     {
       "id": "Austrian Alps",
@@ -747,6 +747,196 @@
         {
           "src": "./public/photos/Innsbruck/IMG_1691.jpg",
           "alt": "Innsbruck 29",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        }
+      ]
+    },
+    {
+      "id": "Munich - The Wave",
+      "title": "Munich The Wave",
+      "description": "",
+      "cover": "./public/photos/Munich - The Wave/IMG_1706.jpg",
+      "photos": [
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1706.jpg",
+          "alt": "Munich The Wave 1",
+          "caption": "",
+          "height": 6000,
+          "width": 4000
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1707.jpg",
+          "alt": "Munich The Wave 2",
+          "caption": "",
+          "height": 3780,
+          "width": 5671
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1708.jpg",
+          "alt": "Munich The Wave 3",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1709.jpg",
+          "alt": "Munich The Wave 4",
+          "caption": "",
+          "height": 5984,
+          "width": 3988
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1712.jpg",
+          "alt": "Munich The Wave 5",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1715.jpg",
+          "alt": "Munich The Wave 6",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1717.jpg",
+          "alt": "Munich The Wave 7",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1721.jpg",
+          "alt": "Munich The Wave 8",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1727.jpg",
+          "alt": "Munich The Wave 9",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1729.jpg",
+          "alt": "Munich The Wave 10",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1733.jpg",
+          "alt": "Munich The Wave 11",
+          "caption": "",
+          "height": 2964,
+          "width": 4446
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1737.jpg",
+          "alt": "Munich The Wave 12",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1738.jpg",
+          "alt": "Munich The Wave 13",
+          "caption": "",
+          "height": 3614,
+          "width": 5421
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1742.jpg",
+          "alt": "Munich The Wave 14",
+          "caption": "",
+          "height": 3299,
+          "width": 4948
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1745.jpg",
+          "alt": "Munich The Wave 15",
+          "caption": "",
+          "height": 3213,
+          "width": 4819
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1753.jpg",
+          "alt": "Munich The Wave 16",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1756.jpg",
+          "alt": "Munich The Wave 17",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1767.jpg",
+          "alt": "Munich The Wave 18",
+          "caption": "",
+          "height": 3270,
+          "width": 4906
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1769.jpg",
+          "alt": "Munich The Wave 19",
+          "caption": "",
+          "height": 3398,
+          "width": 5097
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1770.jpg",
+          "alt": "Munich The Wave 20",
+          "caption": "",
+          "height": 3285,
+          "width": 4927
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1772.jpg",
+          "alt": "Munich The Wave 21",
+          "caption": "",
+          "height": 2978,
+          "width": 4467
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1773.jpg",
+          "alt": "Munich The Wave 22",
+          "caption": "",
+          "height": 3117,
+          "width": 4675
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1791.jpg",
+          "alt": "Munich The Wave 23",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1800.jpg",
+          "alt": "Munich The Wave 24",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1804.jpg",
+          "alt": "Munich The Wave 25",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Munich - The Wave/IMG_1806.jpg",
+          "alt": "Munich The Wave 26",
           "caption": "",
           "height": 4000,
           "width": 6000
