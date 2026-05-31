@@ -1,6 +1,301 @@
 {
-  "generatedAt": "2026-05-31T08:57:13.023Z",
+  "generatedAt": "2026-05-31T10:43:57.308Z",
   "albums": [
+    {
+      "id": "Austrian Alps",
+      "title": "Austrian Alps",
+      "description": "",
+      "cover": "./public/photos/Austrian Alps/IMG_1377.jpg",
+      "photos": [
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1377.jpg",
+          "alt": "Austrian Alps 1",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1379.jpg",
+          "alt": "Austrian Alps 2",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1387.jpg",
+          "alt": "Austrian Alps 3",
+          "caption": "",
+          "height": 3958,
+          "width": 5938
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1391.jpg",
+          "alt": "Austrian Alps 4",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1398.jpg",
+          "alt": "Austrian Alps 5",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1410.jpg",
+          "alt": "Austrian Alps 6",
+          "caption": "",
+          "height": 3679,
+          "width": 5518
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1414.jpg",
+          "alt": "Austrian Alps 7",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1419.jpg",
+          "alt": "Austrian Alps 8",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1421.jpg",
+          "alt": "Austrian Alps 9",
+          "caption": "",
+          "height": 3627,
+          "width": 5440
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1439.jpg",
+          "alt": "Austrian Alps 10",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1440.jpg",
+          "alt": "Austrian Alps 11",
+          "caption": "",
+          "height": 3832,
+          "width": 5748
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1454.jpg",
+          "alt": "Austrian Alps 12",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1461.jpg",
+          "alt": "Austrian Alps 13",
+          "caption": "",
+          "height": 3857,
+          "width": 5786
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1479.jpg",
+          "alt": "Austrian Alps 14",
+          "caption": "",
+          "height": 3857,
+          "width": 5786
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1483.jpg",
+          "alt": "Austrian Alps 15",
+          "caption": "",
+          "height": 3857,
+          "width": 5786
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1485.jpg",
+          "alt": "Austrian Alps 16",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1489.jpg",
+          "alt": "Austrian Alps 17",
+          "caption": "",
+          "height": 3857,
+          "width": 5786
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1498.jpg",
+          "alt": "Austrian Alps 18",
+          "caption": "",
+          "height": 3840,
+          "width": 5759
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1502.jpg",
+          "alt": "Austrian Alps 19",
+          "caption": "",
+          "height": 6000,
+          "width": 4000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1506.jpg",
+          "alt": "Austrian Alps 20",
+          "caption": "",
+          "height": 4000,
+          "width": 3000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1509.jpg",
+          "alt": "Austrian Alps 21",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1513.jpg",
+          "alt": "Austrian Alps 22",
+          "caption": "",
+          "height": 3465,
+          "width": 5197
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1517.jpg",
+          "alt": "Austrian Alps 23",
+          "caption": "",
+          "height": 3746,
+          "width": 5622
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1518.jpg",
+          "alt": "Austrian Alps 24",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1519.jpg",
+          "alt": "Austrian Alps 25",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1524.jpg",
+          "alt": "Austrian Alps 26",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1527.jpg",
+          "alt": "Austrian Alps 27",
+          "caption": "",
+          "height": 6000,
+          "width": 4000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1530.jpg",
+          "alt": "Austrian Alps 28",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1538.jpg",
+          "alt": "Austrian Alps 29",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1540.jpg",
+          "alt": "Austrian Alps 30",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1542.jpg",
+          "alt": "Austrian Alps 31",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1546.jpg",
+          "alt": "Austrian Alps 32",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1552.jpg",
+          "alt": "Austrian Alps 33",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1559.jpg",
+          "alt": "Austrian Alps 34",
+          "caption": "",
+          "height": 3960,
+          "width": 5942
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1566.jpg",
+          "alt": "Austrian Alps 35",
+          "caption": "",
+          "height": 3857,
+          "width": 5786
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1569.jpg",
+          "alt": "Austrian Alps 36",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1571.jpg",
+          "alt": "Austrian Alps 37",
+          "caption": "",
+          "height": 3857,
+          "width": 5786
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1579.jpg",
+          "alt": "Austrian Alps 38",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1581.jpg",
+          "alt": "Austrian Alps 39",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1587.jpg",
+          "alt": "Austrian Alps 40",
+          "caption": "",
+          "height": 4000,
+          "width": 6000
+        },
+        {
+          "src": "./public/photos/Austrian Alps/IMG_1591.jpg",
+          "alt": "Austrian Alps 41",
+          "caption": "",
+          "height": 3857,
+          "width": 5786
+        }
+      ]
+    },
     {
       "id": "Budapest",
       "title": "Budapest",
